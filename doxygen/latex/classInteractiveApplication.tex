@@ -1,0 +1,59 @@
+\hypertarget{classInteractiveApplication}{}\section{Interactive\+Application Class Reference}
+\label{classInteractiveApplication}\index{Interactive\+Application@{Interactive\+Application}}
+
+
+Instance of an application. The interactive application starts the interactive mode in the \hyperlink{classInteractiveApplication_ae77593fe90fa4fae53dc8ca84ba1a239}{run()} function that stays active until the user specifies the \textquotesingle{}exit\textquotesingle{} command on the console. The application will display the result for a specification until a new specification is given.  
+
+
+
+
+{\ttfamily \#include $<$Interactive\+Application.\+hpp$>$}
+
+
+
+Inheritance diagram for Interactive\+Application\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classInteractiveApplication__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Interactive\+Application\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classInteractiveApplication__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classInteractiveApplication_a400252d4a0553cc7fb85106106341fe9}{Interactive\+Application} (const std\+::string \&a\+Name)\hypertarget{classInteractiveApplication_a400252d4a0553cc7fb85106106341fe9}{}\label{classInteractiveApplication_a400252d4a0553cc7fb85106106341fe9}
+
+\begin{DoxyCompactList}\small\item\em constructor of the interactive application \end{DoxyCompactList}\item 
+virtual \hyperlink{classInteractiveApplication_adebc1def706d551144ab3f40511f85eb}{$\sim$\+Interactive\+Application} ()\hypertarget{classInteractiveApplication_adebc1def706d551144ab3f40511f85eb}{}\label{classInteractiveApplication_adebc1def706d551144ab3f40511f85eb}
+
+\begin{DoxyCompactList}\small\item\em destructor of the interactive application \end{DoxyCompactList}\item 
+void \hyperlink{classInteractiveApplication_ae77593fe90fa4fae53dc8ca84ba1a239}{run} ()\hypertarget{classInteractiveApplication_ae77593fe90fa4fae53dc8ca84ba1a239}{}\label{classInteractiveApplication_ae77593fe90fa4fae53dc8ca84ba1a239}
+
+\begin{DoxyCompactList}\small\item\em function that runs the application\+: overrides the pure virtual run -\/function in \hyperlink{Application_8hpp_source}{Application.\+hpp} \end{DoxyCompactList}\item 
+void \hyperlink{classInteractiveApplication_a8fb03895eb606ec5b984b5f0d10aca53}{read\+New\+Specifications} ()\hypertarget{classInteractiveApplication_a8fb03895eb606ec5b984b5f0d10aca53}{}\label{classInteractiveApplication_a8fb03895eb606ec5b984b5f0d10aca53}
+
+\begin{DoxyCompactList}\small\item\em function that reads and parses new specifications 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if an invalid specification was entered by the user \\
+\hline
+\end{DoxyExceptions}
+\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Instance of an application. The interactive application starts the interactive mode in the \hyperlink{classInteractiveApplication_ae77593fe90fa4fae53dc8ca84ba1a239}{run()} function that stays active until the user specifies the \textquotesingle{}exit\textquotesingle{} command on the console. The application will display the result for a specification until a new specification is given. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Interactive\+Application.\+hpp\item 
+src/Interactive\+Application.\+cpp\end{DoxyCompactItemize}

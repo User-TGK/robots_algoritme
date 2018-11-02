@@ -1,0 +1,104 @@
+\hypertarget{classApplication}{}\section{Application Class Reference}
+\label{classApplication}\index{Application@{Application}}
+
+
+the super class for an application instance. The application can be either the interactive mode, the batchmode and the calibration mode. For each deriving class the pure virtual \hyperlink{classApplication_a7dd8e91a715194dd391be7ae3ecdd985}{run()} function will be implemented and run in the main.  
+
+
+
+
+{\ttfamily \#include $<$Application.\+hpp$>$}
+
+
+
+Inheritance diagram for Application\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Application\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classApplication__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classApplication_a848569c0a80400dba542e8d0cf3726fe}{Application} (const std\+::string \&a\+Name)\hypertarget{classApplication_a848569c0a80400dba542e8d0cf3726fe}{}\label{classApplication_a848569c0a80400dba542e8d0cf3726fe}
+
+\begin{DoxyCompactList}\small\item\em default \hyperlink{classApplication}{Application} constructor \end{DoxyCompactList}\item 
+virtual \hyperlink{classApplication_a748bca84fefb9c12661cfaa2f623748d}{$\sim$\+Application} ()\hypertarget{classApplication_a748bca84fefb9c12661cfaa2f623748d}{}\label{classApplication_a748bca84fefb9c12661cfaa2f623748d}
+
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual void \hyperlink{classApplication_a7dd8e91a715194dd391be7ae3ecdd985}{run} ()=0\hypertarget{classApplication_a7dd8e91a715194dd391be7ae3ecdd985}{}\label{classApplication_a7dd8e91a715194dd391be7ae3ecdd985}
+
+\begin{DoxyCompactList}\small\item\em function that runs a specific instance of an application pure virtual\+: the function gets implemented by its deriving classes \end{DoxyCompactList}\item 
+void \hyperlink{classApplication_a05a0e0204f9d319991c0cc5fdc351790}{get\+New\+Frame} ()\hypertarget{classApplication_a05a0e0204f9d319991c0cc5fdc351790}{}\label{classApplication_a05a0e0204f9d319991c0cc5fdc351790}
+
+\begin{DoxyCompactList}\small\item\em Get the New Frame object from the videocapture instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParser}{Parser} \hyperlink{classApplication_ad80c2b36d4feb33d203f112d3c890409}{parser}
+\item 
+std\+::vector$<$ \hyperlink{structSpecification}{Specification} $>$ \hyperlink{classApplication_a041aed976aa156e8265bca7f39c42302}{specifications}
+\item 
+cv\+::\+Video\+Capture \hyperlink{classApplication_acb0907e73dc0c973aebcf66e34b8034b}{cap}
+\item 
+cv\+::\+Mat \hyperlink{classApplication_ab33d5d3c05c0077079ed1c9cb66e1775}{frame}
+\item 
+cv\+::\+Mat \hyperlink{classApplication_a144fb1278bc5e80882b0bd75f077289c}{filtered\+Frame}
+\item 
+\hyperlink{classFilterExecutor}{Filter\+Executor} \hyperlink{classApplication_a8c2095659954e5914e8be3669264ca61}{filter\+Executor}
+\item 
+int \hyperlink{classApplication_a181348e18b3debfa1fa2ba936f20967d}{frame\+Refresh\+Rate} = 250
+\item 
+std\+::string \hyperlink{classApplication_a931b9ffa386916ba1cfd1804823bf51b}{window\+Name}
+\item 
+bool \hyperlink{classApplication_a09114f3400be3c9907a53be6ec4862af}{active} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the super class for an application instance. The application can be either the interactive mode, the batchmode and the calibration mode. For each deriving class the pure virtual \hyperlink{classApplication_a7dd8e91a715194dd391be7ae3ecdd985}{run()} function will be implemented and run in the main. 
+
+\subsection{Member Data Documentation}
+\index{Application@{Application}!active@{active}}
+\index{active@{active}!Application@{Application}}
+\subsubsection[{\texorpdfstring{active}{active}}]{\setlength{\rightskip}{0pt plus 5cm}bool Application\+::active = true\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_a09114f3400be3c9907a53be6ec4862af}{}\label{classApplication_a09114f3400be3c9907a53be6ec4862af}
+Boolean that is true if the application should be active and false if inactive \index{Application@{Application}!cap@{cap}}
+\index{cap@{cap}!Application@{Application}}
+\subsubsection[{\texorpdfstring{cap}{cap}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Video\+Capture Application\+::cap\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_acb0907e73dc0c973aebcf66e34b8034b}{}\label{classApplication_acb0907e73dc0c973aebcf66e34b8034b}
+The image used is based on a videocapture \index{Application@{Application}!filtered\+Frame@{filtered\+Frame}}
+\index{filtered\+Frame@{filtered\+Frame}!Application@{Application}}
+\subsubsection[{\texorpdfstring{filtered\+Frame}{filteredFrame}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Application\+::filtered\+Frame\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_a144fb1278bc5e80882b0bd75f077289c}{}\label{classApplication_a144fb1278bc5e80882b0bd75f077289c}
+The filtered frame to be displayed if a specification is given \index{Application@{Application}!filter\+Executor@{filter\+Executor}}
+\index{filter\+Executor@{filter\+Executor}!Application@{Application}}
+\subsubsection[{\texorpdfstring{filter\+Executor}{filterExecutor}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Filter\+Executor} Application\+::filter\+Executor\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_a8c2095659954e5914e8be3669264ca61}{}\label{classApplication_a8c2095659954e5914e8be3669264ca61}
+The filter executor instance that handles filtering based on specifications \index{Application@{Application}!frame@{frame}}
+\index{frame@{frame}!Application@{Application}}
+\subsubsection[{\texorpdfstring{frame}{frame}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Application\+::frame\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_ab33d5d3c05c0077079ed1c9cb66e1775}{}\label{classApplication_ab33d5d3c05c0077079ed1c9cb66e1775}
+The last frame captured from the camera \index{Application@{Application}!frame\+Refresh\+Rate@{frame\+Refresh\+Rate}}
+\index{frame\+Refresh\+Rate@{frame\+Refresh\+Rate}!Application@{Application}}
+\subsubsection[{\texorpdfstring{frame\+Refresh\+Rate}{frameRefreshRate}}]{\setlength{\rightskip}{0pt plus 5cm}int Application\+::frame\+Refresh\+Rate = 250\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_a181348e18b3debfa1fa2ba936f20967d}{}\label{classApplication_a181348e18b3debfa1fa2ba936f20967d}
+The time untill the frame refreshes (in milliseconds) \index{Application@{Application}!parser@{parser}}
+\index{parser@{parser}!Application@{Application}}
+\subsubsection[{\texorpdfstring{parser}{parser}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Parser} Application\+::parser\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_ad80c2b36d4feb33d203f112d3c890409}{}\label{classApplication_ad80c2b36d4feb33d203f112d3c890409}
+Each application has a parser that converts a batchfile or string to a specification \index{Application@{Application}!specifications@{specifications}}
+\index{specifications@{specifications}!Application@{Application}}
+\subsubsection[{\texorpdfstring{specifications}{specifications}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Specification}$>$ Application\+::specifications\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_a041aed976aa156e8265bca7f39c42302}{}\label{classApplication_a041aed976aa156e8265bca7f39c42302}
+An application contains a list with specifications to be executed \index{Application@{Application}!window\+Name@{window\+Name}}
+\index{window\+Name@{window\+Name}!Application@{Application}}
+\subsubsection[{\texorpdfstring{window\+Name}{windowName}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Application\+::window\+Name\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{classApplication_a931b9ffa386916ba1cfd1804823bf51b}{}\label{classApplication_a931b9ffa386916ba1cfd1804823bf51b}
+The name of the cv\+::named\+Window that displays the captured frames 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Application.\+hpp\item 
+src/Application.\+cpp\end{DoxyCompactItemize}

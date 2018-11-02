@@ -1,0 +1,102 @@
+\hypertarget{classCalibrationMode}{}\section{Calibration\+Mode Class Reference}
+\label{classCalibrationMode}\index{Calibration\+Mode@{Calibration\+Mode}}
+
+
+the calibrationmode is used to calibrate the color ranges. The mode will open up a window with sliders to adjust the color ranges for each color, a window with live frames from the camera and a window that shows the last frame after feature-\/extraction.  
+
+
+
+
+{\ttfamily \#include $<$Calibration\+Mode.\+hpp$>$}
+
+
+
+Inheritance diagram for Calibration\+Mode\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classCalibrationMode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Calibration\+Mode\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classCalibrationMode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCalibrationMode_ac8097b7c6be431d80afad99d3adb73ad}{Calibration\+Mode} (const std\+::string \&a\+Name, const std\+::string \&a\+Calibration\+Window\+Name)
+\begin{DoxyCompactList}\small\item\em Construct a new Calibration Mode object. \end{DoxyCompactList}\item 
+virtual \hyperlink{classCalibrationMode_a1afa1c5b72412c2b07eb3d508582d366}{$\sim$\+Calibration\+Mode} ()\hypertarget{classCalibrationMode_a1afa1c5b72412c2b07eb3d508582d366}{}\label{classCalibrationMode_a1afa1c5b72412c2b07eb3d508582d366}
+
+\begin{DoxyCompactList}\small\item\em Destroy the Calibration Mode object. \end{DoxyCompactList}\item 
+void \hyperlink{classCalibrationMode_a4170e6320aaa744f819340a0064076b9}{run} ()\hypertarget{classCalibrationMode_a4170e6320aaa744f819340a0064076b9}{}\label{classCalibrationMode_a4170e6320aaa744f819340a0064076b9}
+
+\begin{DoxyCompactList}\small\item\em function that runs the application\+: overrides the pure virtual run -\/function in \hyperlink{Application_8hpp_source}{Application.\+hpp} \end{DoxyCompactList}\item 
+void \hyperlink{classCalibrationMode_ad3c3850c2ed080d299f6e4e5a3e1cd87}{update\+Set\+Range} ()\hypertarget{classCalibrationMode_ad3c3850c2ed080d299f6e4e5a3e1cd87}{}\label{classCalibrationMode_ad3c3850c2ed080d299f6e4e5a3e1cd87}
+
+\begin{DoxyCompactList}\small\item\em function that updates the ranges set on the slider to the map \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classCalibrationMode_a9b78a49f8a37355e1563d5f4f52b0136}{calibrate} (int v, void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em static function used as callback by the trackbar sliders from open\+CV \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+the calibrationmode is used to calibrate the color ranges. The mode will open up a window with sliders to adjust the color ranges for each color, a window with live frames from the camera and a window that shows the last frame after feature-\/extraction. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Calibration\+Mode@{Calibration\+Mode}!Calibration\+Mode@{Calibration\+Mode}}
+\index{Calibration\+Mode@{Calibration\+Mode}!Calibration\+Mode@{Calibration\+Mode}}
+\subsubsection[{\texorpdfstring{Calibration\+Mode(const std\+::string \&a\+Name, const std\+::string \&a\+Calibration\+Window\+Name)}{CalibrationMode(const std::string &aName, const std::string &aCalibrationWindowName)}}]{\setlength{\rightskip}{0pt plus 5cm}Calibration\+Mode\+::\+Calibration\+Mode (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+Name, }
+\item[{const std\+::string \&}]{a\+Calibration\+Window\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classCalibrationMode_ac8097b7c6be431d80afad99d3adb73ad}{}\label{classCalibrationMode_ac8097b7c6be431d80afad99d3adb73ad}
+
+
+Construct a new Calibration Mode object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Name} & the name of the camera window \\
+\hline
+{\em a\+Calibration\+Window\+Name} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Calibration\+Mode@{Calibration\+Mode}!calibrate@{calibrate}}
+\index{calibrate@{calibrate}!Calibration\+Mode@{Calibration\+Mode}}
+\subsubsection[{\texorpdfstring{calibrate(int v, void $\ast$ptr)}{calibrate(int v, void *ptr)}}]{\setlength{\rightskip}{0pt plus 5cm}static void Calibration\+Mode\+::calibrate (
+\begin{DoxyParamCaption}
+\item[{int}]{v, }
+\item[{void $\ast$}]{ptr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\hypertarget{classCalibrationMode_a9b78a49f8a37355e1563d5f4f52b0136}{}\label{classCalibrationMode_a9b78a49f8a37355e1563d5f4f52b0136}
+
+
+static function used as callback by the trackbar sliders from open\+CV 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+{\em ptr} & this instance of the object instance \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Calibration\+Mode.\+hpp\item 
+src/Calibration\+Mode.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,231 @@
+\hypertarget{classDetector}{}\section{Detector Class Reference}
+\label{classDetector}\index{Detector@{Detector}}
+
+
+The detector class handles all functionality concerning the feature-\/detecting process It will to to recognize pre-\/defined shapes on a binary image (a captured image after feature-\/extracting)  
+
+
+
+
+{\ttfamily \#include $<$Detection.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDetector_aa43b3d7bbd4b225855b4bcc93f70b225}{Detector} ()\hypertarget{classDetector_aa43b3d7bbd4b225855b4bcc93f70b225}{}\label{classDetector_aa43b3d7bbd4b225855b4bcc93f70b225}
+
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
+virtual \hyperlink{classDetector_ae16b7bf62f39cb287927d56ca17663d7}{$\sim$\+Detector} ()\hypertarget{classDetector_ae16b7bf62f39cb287927d56ca17663d7}{}\label{classDetector_ae16b7bf62f39cb287927d56ca17663d7}
+
+\begin{DoxyCompactList}\small\item\em Destroy the \hyperlink{classDetector}{Detector} object. \end{DoxyCompactList}\item 
+double \hyperlink{classDetector_a8357eef6f384fe126ebf511e21f592f4}{cosine\+Law} (const double a, const double b, const double c) const 
+\begin{DoxyCompactList}\small\item\em implementation of the cosine law (see inline comments in .cpp file) \end{DoxyCompactList}\item 
+bool \hyperlink{classDetector_a646cf1117d58014c700b18fe21318d1b}{check\+If\+Square} (const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, \hyperlink{structFilterDetails}{Filter\+Details} \&filter\+Details) const 
+\begin{DoxyCompactList}\small\item\em function that checks if a shape is a square based on surface, width and height \end{DoxyCompactList}\item 
+bool \hyperlink{classDetector_a11701ce9ed01a8cbc0e12e3f7d30fc59}{check\+If\+Triangle} (const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, \hyperlink{structFilterDetails}{Filter\+Details} \&filter\+Details) const 
+\begin{DoxyCompactList}\small\item\em function that checks if a shape is a triangle based on surface and total of the three angles \end{DoxyCompactList}\item 
+bool \hyperlink{classDetector_a04bb1c8b13c2902e322bdb5533dc24d4}{check\+If\+Rect} (const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, \hyperlink{structFilterDetails}{Filter\+Details} \&filter\+Details) const 
+\begin{DoxyCompactList}\small\item\em function that checks if a shape is a rectangle (a square is also a rectangle) \end{DoxyCompactList}\item 
+bool \hyperlink{classDetector_a93e674f8779b04318ec20e14b9f29fa3}{check\+If\+Circle} (const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, \hyperlink{structFilterDetails}{Filter\+Details} \&filter\+Details) const 
+\begin{DoxyCompactList}\small\item\em function that checks if a shape is a circle \end{DoxyCompactList}\item 
+bool \hyperlink{classDetector_aded5bb3b41a972a3bc97698c07cece6b}{check\+If\+Half\+Circle} (const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, \hyperlink{structFilterDetails}{Filter\+Details} \&filter\+Details) const 
+\begin{DoxyCompactList}\small\item\em function that checks if a shape is half a circle \end{DoxyCompactList}\item 
+std\+::optional$<$ supported\+Shape $>$ \hyperlink{classDetector_a4e9d90d69c0400d48a6b8a3b35b91d77}{detect\+Shape} (const std\+::vector$<$ cv\+::\+Point $>$ \&contour) const 
+\begin{DoxyCompactList}\small\item\em function that detects a shape if it matches (enough) with a reference shape \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The detector class handles all functionality concerning the feature-\/detecting process It will to to recognize pre-\/defined shapes on a binary image (a captured image after feature-\/extracting) 
+
+\subsection{Member Function Documentation}
+\index{Detector@{Detector}!check\+If\+Circle@{check\+If\+Circle}}
+\index{check\+If\+Circle@{check\+If\+Circle}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{check\+If\+Circle(const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, Filter\+Details \&filter\+Details) const }{checkIfCircle(const std::vector< std::vector< cv::Point >> &contours, int index, FilterDetails &filterDetails) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+::check\+If\+Circle (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&}]{contours, }
+\item[{int}]{index, }
+\item[{{\bf Filter\+Details} \&}]{filter\+Details}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDetector_a93e674f8779b04318ec20e14b9f29fa3}{}\label{classDetector_a93e674f8779b04318ec20e14b9f29fa3}
+
+
+function that checks if a shape is a circle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contours} & the contours detected \\
+\hline
+{\em index} & the index of the contour to be detected \\
+\hline
+{\em filter\+Details} & the result (details) of the detection for a specific set of contours \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the contours matches with the definition of a square 
+
+false if the contours don\textquotesingle{}t match with the definition of a circle
+\end{DoxyReturn}
+A circle is a shape where the surface of the shape is equal to π $\ast$ r2 \&\& Each line from the center to the border has the same length \index{Detector@{Detector}!check\+If\+Half\+Circle@{check\+If\+Half\+Circle}}
+\index{check\+If\+Half\+Circle@{check\+If\+Half\+Circle}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{check\+If\+Half\+Circle(const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, Filter\+Details \&filter\+Details) const }{checkIfHalfCircle(const std::vector< std::vector< cv::Point >> &contours, int index, FilterDetails &filterDetails) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+::check\+If\+Half\+Circle (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&}]{contours, }
+\item[{int}]{index, }
+\item[{{\bf Filter\+Details} \&}]{filter\+Details}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDetector_aded5bb3b41a972a3bc97698c07cece6b}{}\label{classDetector_aded5bb3b41a972a3bc97698c07cece6b}
+
+
+function that checks if a shape is half a circle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contours} & the contours detected \\
+\hline
+{\em index} & the index of the contour to be detected \\
+\hline
+{\em filter\+Details} & the result (details) of the detection for a specific set of contours \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the contours matches with the definition of a square 
+
+false if the contours don\textquotesingle{}t match with the definition of half a circle 
+\end{DoxyReturn}
+\index{Detector@{Detector}!check\+If\+Rect@{check\+If\+Rect}}
+\index{check\+If\+Rect@{check\+If\+Rect}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{check\+If\+Rect(const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, Filter\+Details \&filter\+Details) const }{checkIfRect(const std::vector< std::vector< cv::Point >> &contours, int index, FilterDetails &filterDetails) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+::check\+If\+Rect (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&}]{contours, }
+\item[{int}]{index, }
+\item[{{\bf Filter\+Details} \&}]{filter\+Details}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDetector_a04bb1c8b13c2902e322bdb5533dc24d4}{}\label{classDetector_a04bb1c8b13c2902e322bdb5533dc24d4}
+
+
+function that checks if a shape is a rectangle (a square is also a rectangle) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contours} & the contours detected \\
+\hline
+{\em index} & the index of the contour to be detected \\
+\hline
+{\em filter\+Details} & the result (details) of the detection for a specific set of contours \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the contours matches with the definition of a square 
+
+false if the contours don\textquotesingle{}t match with the definition of a rectangle 
+\end{DoxyReturn}
+\index{Detector@{Detector}!check\+If\+Square@{check\+If\+Square}}
+\index{check\+If\+Square@{check\+If\+Square}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{check\+If\+Square(const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, Filter\+Details \&filter\+Details) const }{checkIfSquare(const std::vector< std::vector< cv::Point >> &contours, int index, FilterDetails &filterDetails) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+::check\+If\+Square (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&}]{contours, }
+\item[{int}]{index, }
+\item[{{\bf Filter\+Details} \&}]{filter\+Details}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDetector_a646cf1117d58014c700b18fe21318d1b}{}\label{classDetector_a646cf1117d58014c700b18fe21318d1b}
+
+
+function that checks if a shape is a square based on surface, width and height 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contours} & the contours detected \\
+\hline
+{\em index} & the index of the contour to be detected \\
+\hline
+{\em filter\+Details} & the result (details) of the detection for a specific set of contours \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the contours matches with the definition of a square 
+
+false if the contours don\textquotesingle{}t match with the definition of a square 
+\end{DoxyReturn}
+Factor determines how close the detected shape should be to a square to be treated like a square
+
+Any side is $>$ base side divided by the factor\+: return false
+
+Else\+: the shape is (close enough to) a square\+: return true \index{Detector@{Detector}!check\+If\+Triangle@{check\+If\+Triangle}}
+\index{check\+If\+Triangle@{check\+If\+Triangle}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{check\+If\+Triangle(const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, Filter\+Details \&filter\+Details) const }{checkIfTriangle(const std::vector< std::vector< cv::Point >> &contours, int index, FilterDetails &filterDetails) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Detector\+::check\+If\+Triangle (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&}]{contours, }
+\item[{int}]{index, }
+\item[{{\bf Filter\+Details} \&}]{filter\+Details}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDetector_a11701ce9ed01a8cbc0e12e3f7d30fc59}{}\label{classDetector_a11701ce9ed01a8cbc0e12e3f7d30fc59}
+
+
+function that checks if a shape is a triangle based on surface and total of the three angles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contours} & the contours detected \\
+\hline
+{\em index} & the index of the contour to be detected \\
+\hline
+{\em filter\+Details} & the result (details) of the detection for a specific set of contours \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the contours matches with the definition of a square 
+
+false if the contours don\textquotesingle{}t match with the definition of a triangle
+\end{DoxyReturn}
+A triangle is a closed shape with 3 angles where the sum of 3 angles is (almost) equal to 180° The triangle has been allowed a deviation of 1.\+0° relative to 180°
+
+If the total of the three corners dont add up to +/-\/ 180° the shape is not a triangle \index{Detector@{Detector}!cosine\+Law@{cosine\+Law}}
+\index{cosine\+Law@{cosine\+Law}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{cosine\+Law(const double a, const double b, const double c) const }{cosineLaw(const double a, const double b, const double c) const }}]{\setlength{\rightskip}{0pt plus 5cm}double Detector\+::cosine\+Law (
+\begin{DoxyParamCaption}
+\item[{const double}]{a, }
+\item[{const double}]{b, }
+\item[{const double}]{c}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDetector_a8357eef6f384fe126ebf511e21f592f4}{}\label{classDetector_a8357eef6f384fe126ebf511e21f592f4}
+
+
+implementation of the cosine law (see inline comments in .cpp file) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & first width \\
+\hline
+{\em b} & second width \\
+\hline
+{\em c} & third width \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the angle
+\end{DoxyReturn}
+Implementation based on\+: \href{https://en.wikipedia.org/wiki/Law_of_cosines}{\tt https\+://en.\+wikipedia.\+org/wiki/\+Law\+\_\+of\+\_\+cosines} C++ implementation of\+: \textquotesingle{}a² = b² + c² -\/2bc $\ast$ cos(\+A)\textquotesingle{} \index{Detector@{Detector}!detect\+Shape@{detect\+Shape}}
+\index{detect\+Shape@{detect\+Shape}!Detector@{Detector}}
+\subsubsection[{\texorpdfstring{detect\+Shape(const std\+::vector$<$ cv\+::\+Point $>$ \&contour) const }{detectShape(const std::vector< cv::Point > &contour) const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::optional$<$ supported\+Shape $>$ Detector\+::detect\+Shape (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ cv\+::\+Point $>$ \&}]{contour}
+\end{DoxyParamCaption}
+) const}\hypertarget{classDetector_a4e9d90d69c0400d48a6b8a3b35b91d77}{}\label{classDetector_a4e9d90d69c0400d48a6b8a3b35b91d77}
+
+
+function that detects a shape if it matches (enough) with a reference shape 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contour} & the contour to be detected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::optional$<$supported\+Shape$>$ nullopt if the shape didn\textquotesingle{}t match enough with any reference shape, else the shape it matches the most with 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Detection.\+hpp\item 
+src/Detection.\+cpp\end{DoxyCompactItemize}

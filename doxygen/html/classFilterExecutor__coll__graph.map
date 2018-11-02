@@ -1,0 +1,4 @@
+<map id="FilterExecutor" name="FilterExecutor">
+<area shape="rect" id="node2" href="$classDetector.html" title="The detector class handles all functionality concerning the feature&#45;detecting process It will to to r..." alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node3" href="$classExtractor.html" title="The extractor class filters a raw image untill a simple binary image is left with only the pixels rem..." alt="" coords="101,5,176,32"/>
+</map>

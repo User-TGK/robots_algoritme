@@ -1,0 +1,141 @@
+\hypertarget{classFilterExecutor}{}\section{Filter\+Executor Class Reference}
+\label{classFilterExecutor}\index{Filter\+Executor@{Filter\+Executor}}
+
+
+the filter executor combines the provided functionality by the detection and extraction classes. It will make sure every image is filtered properly and only the shape requested in a specification is marked. When finished it will make sure the result of a specification is showed to the user.  
+
+
+
+
+{\ttfamily \#include $<$Filter\+Executor.\+hpp$>$}
+
+
+
+Collaboration diagram for Filter\+Executor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classFilterExecutor__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classFilterExecutor_a6dd36c64637e2747f1d997d4de5a121c}{$\sim$\+Filter\+Executor} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Filter Executor object. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{classFilterExecutor_a06f4223dc3e15501aacc42b1f5bd026d}{filter} (const cv\+::\+Mat \&original, const \hyperlink{structSpecification}{Specification} \&specification)
+\begin{DoxyCompactList}\small\item\em function that calls the necessary extraction -\/and detection function(s) to run a filter \end{DoxyCompactList}\item 
+bool \hyperlink{classFilterExecutor_ab6054cdefd0e09ff04f2dd95489b1bea}{is\+Object} (const supported\+Shape \&shape, const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, \hyperlink{structFilterDetails}{Filter\+Details} \&filter\+Details) const 
+\begin{DoxyCompactList}\small\item\em function that verifies if a set of contours is a specific function \end{DoxyCompactList}\item 
+void \hyperlink{classFilterExecutor_a778b1fd0181990176842e5b107c0a76d}{set\+Display\+Mode} (const Display\+Mode \&a\+Display\+Mode)
+\begin{DoxyCompactList}\small\item\em Set the Display Mode object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classExtractor}{Extractor} \hyperlink{classFilterExecutor_a4ab5f958ae995540afef4de2fc968d5d}{extractor}
+\item 
+\hyperlink{classDetector}{Detector} \hyperlink{classFilterExecutor_a5e2392a802b3aab62e95e5a7a7a066ae}{detector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the filter executor combines the provided functionality by the detection and extraction classes. It will make sure every image is filtered properly and only the shape requested in a specification is marked. When finished it will make sure the result of a specification is showed to the user. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Filter\+Executor@{Filter\+Executor}!````~Filter\+Executor@{$\sim$\+Filter\+Executor}}
+\index{````~Filter\+Executor@{$\sim$\+Filter\+Executor}!Filter\+Executor@{Filter\+Executor}}
+\subsubsection[{\texorpdfstring{$\sim$\+Filter\+Executor()}{~FilterExecutor()}}]{\setlength{\rightskip}{0pt plus 5cm}Filter\+Executor\+::$\sim$\+Filter\+Executor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classFilterExecutor_a6dd36c64637e2747f1d997d4de5a121c}{}\label{classFilterExecutor_a6dd36c64637e2747f1d997d4de5a121c}
+
+
+Construct a new Filter Executor object. 
+
+Destroy the Filter Executor object 
+
+\subsection{Member Function Documentation}
+\index{Filter\+Executor@{Filter\+Executor}!filter@{filter}}
+\index{filter@{filter}!Filter\+Executor@{Filter\+Executor}}
+\subsubsection[{\texorpdfstring{filter(const cv\+::\+Mat \&original, const Specification \&specification)}{filter(const cv::Mat &original, const Specification &specification)}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Filter\+Executor\+::filter (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{original, }
+\item[{const {\bf Specification} \&}]{specification}
+\end{DoxyParamCaption}
+)}\hypertarget{classFilterExecutor_a06f4223dc3e15501aacc42b1f5bd026d}{}\label{classFilterExecutor_a06f4223dc3e15501aacc42b1f5bd026d}
+
+
+function that calls the necessary extraction -\/and detection function(s) to run a filter 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & the original frame where the filter has to be executed upon \\
+\hline
+{\em specification} & the specification contains information about the filter request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat the original image where the filter has run upon 
+\end{DoxyReturn}
+\index{Filter\+Executor@{Filter\+Executor}!is\+Object@{is\+Object}}
+\index{is\+Object@{is\+Object}!Filter\+Executor@{Filter\+Executor}}
+\subsubsection[{\texorpdfstring{is\+Object(const supported\+Shape \&shape, const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&contours, int index, Filter\+Details \&filter\+Details) const }{isObject(const supportedShape &shape, const std::vector< std::vector< cv::Point >> &contours, int index, FilterDetails &filterDetails) const }}]{\setlength{\rightskip}{0pt plus 5cm}bool Filter\+Executor\+::is\+Object (
+\begin{DoxyParamCaption}
+\item[{const supported\+Shape \&}]{shape, }
+\item[{const std\+::vector$<$ std\+::vector$<$ cv\+::\+Point $>$$>$ \&}]{contours, }
+\item[{int}]{index, }
+\item[{{\bf Filter\+Details} \&}]{filter\+Details}
+\end{DoxyParamCaption}
+) const}\hypertarget{classFilterExecutor_ab6054cdefd0e09ff04f2dd95489b1bea}{}\label{classFilterExecutor_ab6054cdefd0e09ff04f2dd95489b1bea}
+
+
+function that verifies if a set of contours is a specific function 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & the shape to be detected \\
+\hline
+{\em contours} & the detected set of contours \\
+\hline
+{\em index} & the position in the contours vector that indicates the current contour to be handled \\
+\hline
+{\em filter\+Details} & instance of struct \hyperlink{structFilterDetails}{Filter\+Details} that contain the result of the filter process \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the contours matched the shape to be detected 
+
+false if the contours didn\textquotesingle{}t match the shape to be detected 
+\end{DoxyReturn}
+\index{Filter\+Executor@{Filter\+Executor}!set\+Display\+Mode@{set\+Display\+Mode}}
+\index{set\+Display\+Mode@{set\+Display\+Mode}!Filter\+Executor@{Filter\+Executor}}
+\subsubsection[{\texorpdfstring{set\+Display\+Mode(const Display\+Mode \&a\+Display\+Mode)}{setDisplayMode(const DisplayMode &aDisplayMode)}}]{\setlength{\rightskip}{0pt plus 5cm}void Filter\+Executor\+::set\+Display\+Mode (
+\begin{DoxyParamCaption}
+\item[{const Display\+Mode \&}]{a\+Display\+Mode}
+\end{DoxyParamCaption}
+)}\hypertarget{classFilterExecutor_a778b1fd0181990176842e5b107c0a76d}{}\label{classFilterExecutor_a778b1fd0181990176842e5b107c0a76d}
+
+
+Set the Display Mode object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Display\+Mode} & the displaymode to be set \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Filter\+Executor@{Filter\+Executor}!detector@{detector}}
+\index{detector@{detector}!Filter\+Executor@{Filter\+Executor}}
+\subsubsection[{\texorpdfstring{detector}{detector}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Detector} Filter\+Executor\+::detector}\hypertarget{classFilterExecutor_a5e2392a802b3aab62e95e5a7a7a066ae}{}\label{classFilterExecutor_a5e2392a802b3aab62e95e5a7a7a066ae}
+Detection instance detects certain objects after image extraction \index{Filter\+Executor@{Filter\+Executor}!extractor@{extractor}}
+\index{extractor@{extractor}!Filter\+Executor@{Filter\+Executor}}
+\subsubsection[{\texorpdfstring{extractor}{extractor}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Extractor} Filter\+Executor\+::extractor}\hypertarget{classFilterExecutor_a4ab5f958ae995540afef4de2fc968d5d}{}\label{classFilterExecutor_a4ab5f958ae995540afef4de2fc968d5d}
+Extration instance extracs an image based on a color specified in a specification 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Filter\+Executor.\+hpp\item 
+src/Filter\+Executor.\+cpp\end{DoxyCompactItemize}

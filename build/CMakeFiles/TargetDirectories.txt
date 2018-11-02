@@ -1,0 +1,3 @@
+/home/ties/Documents/WorldOfRobots/Robots/robotsalgoritme/build/CMakeFiles/rebuild_cache.dir
+/home/ties/Documents/WorldOfRobots/Robots/robotsalgoritme/build/CMakeFiles/RobotAlgorithm.dir
+/home/ties/Documents/WorldOfRobots/Robots/robotsalgoritme/build/CMakeFiles/edit_cache.dir

@@ -1,0 +1,7 @@
+<map id="InteractiveApplication" name="InteractiveApplication">
+<area shape="rect" id="node2" href="$classApplication.html" title="the super class for an application instance. The application can be either the interactive mode..." alt="" coords="102,184,189,211"/>
+<area shape="rect" id="node3" href="$classFilterExecutor.html" title="the filter executor combines the provided functionality by the detection and extraction classes..." alt="" coords="38,95,141,121"/>
+<area shape="rect" id="node4" href="$classDetector.html" title="The detector class handles all functionality concerning the feature&#45;detecting process It will to to r..." alt="" coords="5,5,77,32"/>
+<area shape="rect" id="node5" href="$classExtractor.html" title="The extractor class filters a raw image untill a simple binary image is left with only the pixels rem..." alt="" coords="101,5,176,32"/>
+<area shape="rect" id="node6" href="$classParser.html" title="the parser contains all functionality to parse batch files and specifications. " alt="" coords="171,95,231,121"/>
+</map>

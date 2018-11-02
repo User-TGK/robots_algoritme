@@ -1,0 +1,72 @@
+\hypertarget{classBatchApplication}{}\section{Batch\+Application Class Reference}
+\label{classBatchApplication}\index{Batch\+Application@{Batch\+Application}}
+
+
+Instance of an application. The batch application starts the batch mode in the \hyperlink{classBatchApplication_a5338e7513a806b5e751f92d0704d0f8b}{run()} function that stays active until all specifications are handled. The application will display the result for a specification a couple of times (itering as much as specified in frames\+Per\+Spec) before moving to the next specification.  
+
+
+
+
+{\ttfamily \#include $<$Batch\+Application.\+hpp$>$}
+
+
+
+Inheritance diagram for Batch\+Application\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{classBatchApplication__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Batch\+Application\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classBatchApplication__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBatchApplication_ad95d865cf89fe8591f600ffdcf2fd31b}{Batch\+Application} (const std\+::string \&batch\+Config\+Path, const std\+::string \&a\+Name)
+\begin{DoxyCompactList}\small\item\em constructor of a batchapplication\+: here the specifications stored in a batch file will be parsed into a list of specifications \end{DoxyCompactList}\item 
+virtual \hyperlink{classBatchApplication_a5112919cc14101d58ec2a9f6b884af79}{$\sim$\+Batch\+Application} ()\hypertarget{classBatchApplication_a5112919cc14101d58ec2a9f6b884af79}{}\label{classBatchApplication_a5112919cc14101d58ec2a9f6b884af79}
+
+\begin{DoxyCompactList}\small\item\em destructor of a batchapplication (will be called after the execution of the batch is finished) \end{DoxyCompactList}\item 
+void \hyperlink{classBatchApplication_a5338e7513a806b5e751f92d0704d0f8b}{run} ()\hypertarget{classBatchApplication_a5338e7513a806b5e751f92d0704d0f8b}{}\label{classBatchApplication_a5338e7513a806b5e751f92d0704d0f8b}
+
+\begin{DoxyCompactList}\small\item\em function that runs the application\+: overrides the pure virtual run -\/function in \hyperlink{Application_8hpp_source}{Application.\+hpp} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Instance of an application. The batch application starts the batch mode in the \hyperlink{classBatchApplication_a5338e7513a806b5e751f92d0704d0f8b}{run()} function that stays active until all specifications are handled. The application will display the result for a specification a couple of times (itering as much as specified in frames\+Per\+Spec) before moving to the next specification. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Batch\+Application@{Batch\+Application}!Batch\+Application@{Batch\+Application}}
+\index{Batch\+Application@{Batch\+Application}!Batch\+Application@{Batch\+Application}}
+\subsubsection[{\texorpdfstring{Batch\+Application(const std\+::string \&batch\+Config\+Path, const std\+::string \&a\+Name)}{BatchApplication(const std::string &batchConfigPath, const std::string &aName)}}]{\setlength{\rightskip}{0pt plus 5cm}Batch\+Application\+::\+Batch\+Application (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{batch\+Config\+Path, }
+\item[{const std\+::string \&}]{a\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classBatchApplication_ad95d865cf89fe8591f600ffdcf2fd31b}{}\label{classBatchApplication_ad95d865cf89fe8591f600ffdcf2fd31b}
+
+
+constructor of a batchapplication\+: here the specifications stored in a batch file will be parsed into a list of specifications 
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch\+Config\+Path} & the path to the batchfile used in the batchmode \\
+\hline
+{\em a\+Name} & the name of the window \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Batch\+Application.\+hpp\item 
+src/Batch\+Application.\+cpp\end{DoxyCompactItemize}

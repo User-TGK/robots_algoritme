@@ -1,0 +1,90 @@
+\hypertarget{classExtractor}{}\section{Extractor Class Reference}
+\label{classExtractor}\index{Extractor@{Extractor}}
+
+
+The extractor class filters a raw image untill a simple binary image is left with only the pixels remaining that were in range of the configured color range (minus noise). The feature-\/extraction must always happen before feature-\/detection (read \hyperlink{Detection_8hpp_source}{Detection.\+hpp}).  
+
+
+
+
+{\ttfamily \#include $<$Extraction.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classExtractor_a2726e6a94c51c2b2dbc518199d054103}{Extractor} ()\hypertarget{classExtractor_a2726e6a94c51c2b2dbc518199d054103}{}\label{classExtractor_a2726e6a94c51c2b2dbc518199d054103}
+
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classExtractor}{Extractor} object. \end{DoxyCompactList}\item 
+virtual \hyperlink{classExtractor_a0da249c590c92ed0714e8bd69ac236f4}{$\sim$\+Extractor} ()\hypertarget{classExtractor_a0da249c590c92ed0714e8bd69ac236f4}{}\label{classExtractor_a0da249c590c92ed0714e8bd69ac236f4}
+
+\begin{DoxyCompactList}\small\item\em Destroy the \hyperlink{classExtractor}{Extractor} object. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{classExtractor_a89c360e740a37c38e6ef23185f5cb862}{extract} (const cv\+::\+Mat \&original, const supported\+Color \&color) const 
+\begin{DoxyCompactList}\small\item\em function that extracts the image based on a selected color All pixels that are not in range of the color-\/range and noise will be removed \end{DoxyCompactList}\item 
+std\+::map$<$ supported\+Color, \hyperlink{structcolorRange}{color\+Range} $>$ \hyperlink{classExtractor_ab48284118c37aff704e714f9a6da1331}{mapped\+Color\+Ranges\+Map\+From\+File} () const 
+\begin{DoxyCompactList}\small\item\em function that parses a config file with color ranges to a map \end{DoxyCompactList}\item 
+void \hyperlink{classExtractor_adfd9ce2b8cee262883ee94a5e27e1d69}{mapped\+Color\+Ranges\+Map\+To\+File} (const std\+::map$<$ supported\+Color, \hyperlink{structcolorRange}{color\+Range} $>$ \&a\+Mapped\+Color\+Ranges\+Map)
+\begin{DoxyCompactList}\small\item\em function that parses a map with color ranges to a config file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The extractor class filters a raw image untill a simple binary image is left with only the pixels remaining that were in range of the configured color range (minus noise). The feature-\/extraction must always happen before feature-\/detection (read \hyperlink{Detection_8hpp_source}{Detection.\+hpp}). 
+
+\subsection{Member Function Documentation}
+\index{Extractor@{Extractor}!extract@{extract}}
+\index{extract@{extract}!Extractor@{Extractor}}
+\subsubsection[{\texorpdfstring{extract(const cv\+::\+Mat \&original, const supported\+Color \&color) const }{extract(const cv::Mat &original, const supportedColor &color) const }}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Extractor\+::extract (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{original, }
+\item[{const supported\+Color \&}]{color}
+\end{DoxyParamCaption}
+) const}\hypertarget{classExtractor_a89c360e740a37c38e6ef23185f5cb862}{}\label{classExtractor_a89c360e740a37c38e6ef23185f5cb862}
+
+
+function that extracts the image based on a selected color All pixels that are not in range of the color-\/range and noise will be removed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & the raw (not converted) image object \\
+\hline
+{\em color} & the requested color \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cv\+::\+Mat the extracted image (with only the relevant pixels remaining) 
+\end{DoxyReturn}
+\index{Extractor@{Extractor}!mapped\+Color\+Ranges\+Map\+From\+File@{mapped\+Color\+Ranges\+Map\+From\+File}}
+\index{mapped\+Color\+Ranges\+Map\+From\+File@{mapped\+Color\+Ranges\+Map\+From\+File}!Extractor@{Extractor}}
+\subsubsection[{\texorpdfstring{mapped\+Color\+Ranges\+Map\+From\+File() const }{mappedColorRangesMapFromFile() const }}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ supported\+Color, {\bf color\+Range} $>$ Extractor\+::mapped\+Color\+Ranges\+Map\+From\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classExtractor_ab48284118c37aff704e714f9a6da1331}{}\label{classExtractor_ab48284118c37aff704e714f9a6da1331}
+
+
+function that parses a config file with color ranges to a map 
+
+\begin{DoxyReturn}{Returns}
+std\+::map$<$supported\+Color, color\+Range$>$ the converted ranges stored in a map 
+\end{DoxyReturn}
+\index{Extractor@{Extractor}!mapped\+Color\+Ranges\+Map\+To\+File@{mapped\+Color\+Ranges\+Map\+To\+File}}
+\index{mapped\+Color\+Ranges\+Map\+To\+File@{mapped\+Color\+Ranges\+Map\+To\+File}!Extractor@{Extractor}}
+\subsubsection[{\texorpdfstring{mapped\+Color\+Ranges\+Map\+To\+File(const std\+::map$<$ supported\+Color, color\+Range $>$ \&a\+Mapped\+Color\+Ranges\+Map)}{mappedColorRangesMapToFile(const std::map< supportedColor, colorRange > &aMappedColorRangesMap)}}]{\setlength{\rightskip}{0pt plus 5cm}void Extractor\+::mapped\+Color\+Ranges\+Map\+To\+File (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ supported\+Color, {\bf color\+Range} $>$ \&}]{a\+Mapped\+Color\+Ranges\+Map}
+\end{DoxyParamCaption}
+)}\hypertarget{classExtractor_adfd9ce2b8cee262883ee94a5e27e1d69}{}\label{classExtractor_adfd9ce2b8cee262883ee94a5e27e1d69}
+
+
+function that parses a map with color ranges to a config file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Mapped\+Color\+Ranges\+Map} & the map to be parsed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Extraction.\+hpp\item 
+src/Extraction.\+cpp\end{DoxyCompactItemize}

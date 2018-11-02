@@ -1,0 +1,95 @@
+\hypertarget{structSpecification}{}\section{Specification Struct Reference}
+\label{structSpecification}\index{Specification@{Specification}}
+
+
+filtering process is based on a specification. This struct describes the attributes a specification has.  
+
+
+
+
+{\ttfamily \#include $<$Specification.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structSpecification_a1da67067067a6876811fe1af3dc09ef0}{Specification} ()\hypertarget{structSpecification_a1da67067067a6876811fe1af3dc09ef0}{}\label{structSpecification_a1da67067067a6876811fe1af3dc09ef0}
+
+\begin{DoxyCompactList}\small\item\em default constructor of a specification \end{DoxyCompactList}\item 
+\hyperlink{structSpecification_aa08664e5866421d776266b69c90138cb}{Specification} (const \hyperlink{structSpecification}{Specification} \&rhs)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{structSpecification}{Specification} object (copyconstructor) \end{DoxyCompactList}\item 
+\hyperlink{structSpecification_a9e5dea83bffde839da128d4551a6a691}{$\sim$\+Specification} ()\hypertarget{structSpecification_a9e5dea83bffde839da128d4551a6a691}{}\label{structSpecification_a9e5dea83bffde839da128d4551a6a691}
+
+\begin{DoxyCompactList}\small\item\em destructor of a specification \end{DoxyCompactList}\item 
+\hyperlink{structSpecification}{Specification} \& \hyperlink{structSpecification_a63c2bfcc3247194eaaf72126de1888aa}{operator=} (const \hyperlink{structSpecification}{Specification} \&rhs)
+\begin{DoxyCompactList}\small\item\em Assignment operator for a specification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+supported\+Shape \hyperlink{structSpecification_a07d43e0225d3d091376ff907493d9f5e}{shape}
+\item 
+supported\+Color \hyperlink{structSpecification_a84179e823020d11ac7fa9e063d5f0b53}{color}
+\item 
+bool \hyperlink{structSpecification_ace792a91a5cee16442844dc7b4099974}{exit} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+filtering process is based on a specification. This struct describes the attributes a specification has. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Specification@{Specification}!Specification@{Specification}}
+\index{Specification@{Specification}!Specification@{Specification}}
+\subsubsection[{\texorpdfstring{Specification(const Specification \&rhs)}{Specification(const Specification &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}Specification\+::\+Specification (
+\begin{DoxyParamCaption}
+\item[{const {\bf Specification} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{structSpecification_aa08664e5866421d776266b69c90138cb}{}\label{structSpecification_aa08664e5866421d776266b69c90138cb}
+
+
+Construct a new \hyperlink{structSpecification}{Specification} object (copyconstructor) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & the object to be copied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Specification@{Specification}!operator=@{operator=}}
+\index{operator=@{operator=}!Specification@{Specification}}
+\subsubsection[{\texorpdfstring{operator=(const Specification \&rhs)}{operator=(const Specification &rhs)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Specification} \& Specification\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Specification} \&}]{rhs}
+\end{DoxyParamCaption}
+)}\hypertarget{structSpecification_a63c2bfcc3247194eaaf72126de1888aa}{}\label{structSpecification_a63c2bfcc3247194eaaf72126de1888aa}
+
+
+Assignment operator for a specification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & contains the values to be assigned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{structSpecification}{Specification}\& the specification instance with the set values 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{Specification@{Specification}!color@{color}}
+\index{color@{color}!Specification@{Specification}}
+\subsubsection[{\texorpdfstring{color}{color}}]{\setlength{\rightskip}{0pt plus 5cm}supported\+Color Specification\+::color}\hypertarget{structSpecification_a84179e823020d11ac7fa9e063d5f0b53}{}\label{structSpecification_a84179e823020d11ac7fa9e063d5f0b53}
+The color that the shape is supposed to have according to this specification instance \index{Specification@{Specification}!exit@{exit}}
+\index{exit@{exit}!Specification@{Specification}}
+\subsubsection[{\texorpdfstring{exit}{exit}}]{\setlength{\rightskip}{0pt plus 5cm}bool Specification\+::exit = false}\hypertarget{structSpecification_ace792a91a5cee16442844dc7b4099974}{}\label{structSpecification_ace792a91a5cee16442844dc7b4099974}
+Contains a bool value, true if the specification tells the interactive mode to shutdown \index{Specification@{Specification}!shape@{shape}}
+\index{shape@{shape}!Specification@{Specification}}
+\subsubsection[{\texorpdfstring{shape}{shape}}]{\setlength{\rightskip}{0pt plus 5cm}supported\+Shape Specification\+::shape}\hypertarget{structSpecification_a07d43e0225d3d091376ff907493d9f5e}{}\label{structSpecification_a07d43e0225d3d091376ff907493d9f5e}
+The shape to be detected according to this specification instance 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Specification.\+hpp\item 
+src/Specification.\+cpp\end{DoxyCompactItemize}

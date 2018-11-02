@@ -1,0 +1,84 @@
+\hypertarget{structFilterDetails}{}\section{Filter\+Details Struct Reference}
+\label{structFilterDetails}\index{Filter\+Details@{Filter\+Details}}
+
+
+Struct that contains the details of the filter result for a specific specification.  
+
+
+
+
+{\ttfamily \#include $<$Detection.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{structFilterDetails_a54e86f6b64249a9aee7f8d6f39f51939}{set\+Detection\+Result} (bool a\+Found, int a\+Surface, int a\+X\+Pos\+Center, int a\+Y\+Pos\+Center)
+\begin{DoxyCompactList}\small\item\em Set the Detection Result object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{structFilterDetails_ae022d744143354507ecb4a46c4c4dcf4}{found}
+\item 
+int \hyperlink{structFilterDetails_ae5c1354aeca0877f498f6e05853aedf4}{surface}
+\item 
+int \hyperlink{structFilterDetails_a93a398ce2876fd270232559ab29b79ce}{x\+Pos\+Center}
+\item 
+int \hyperlink{structFilterDetails_a68c1cab0adbbfb1ffff14518fdc2295e}{y\+Pos\+Center}
+\item 
+std\+::clock\+\_\+t \hyperlink{structFilterDetails_ac2d190dc9427d80070ac50ce8c703d43}{clock\+Ticks}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Struct that contains the details of the filter result for a specific specification. 
+
+\subsection{Member Function Documentation}
+\index{Filter\+Details@{Filter\+Details}!set\+Detection\+Result@{set\+Detection\+Result}}
+\index{set\+Detection\+Result@{set\+Detection\+Result}!Filter\+Details@{Filter\+Details}}
+\subsubsection[{\texorpdfstring{set\+Detection\+Result(bool a\+Found, int a\+Surface, int a\+X\+Pos\+Center, int a\+Y\+Pos\+Center)}{setDetectionResult(bool aFound, int aSurface, int aXPosCenter, int aYPosCenter)}}]{\setlength{\rightskip}{0pt plus 5cm}void Filter\+Details\+::set\+Detection\+Result (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+Found, }
+\item[{int}]{a\+Surface, }
+\item[{int}]{a\+X\+Pos\+Center, }
+\item[{int}]{a\+Y\+Pos\+Center}
+\end{DoxyParamCaption}
+)}\hypertarget{structFilterDetails_a54e86f6b64249a9aee7f8d6f39f51939}{}\label{structFilterDetails_a54e86f6b64249a9aee7f8d6f39f51939}
+
+
+Set the Detection Result object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+Found} & true of the specification was found in the shape, false if not \\
+\hline
+{\em a\+Surface} & the surface of the object \\
+\hline
+{\em a\+X\+Pos\+Center} & the x coordinate of the center of the object \\
+\hline
+{\em a\+Y\+Pos\+Center} & the y coordinate of the center of the object \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Filter\+Details@{Filter\+Details}!clock\+Ticks@{clock\+Ticks}}
+\index{clock\+Ticks@{clock\+Ticks}!Filter\+Details@{Filter\+Details}}
+\subsubsection[{\texorpdfstring{clock\+Ticks}{clockTicks}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::clock\+\_\+t Filter\+Details\+::clock\+Ticks}\hypertarget{structFilterDetails_ac2d190dc9427d80070ac50ce8c703d43}{}\label{structFilterDetails_ac2d190dc9427d80070ac50ce8c703d43}
+The amount of clock ticks it took before the shape was detected \index{Filter\+Details@{Filter\+Details}!found@{found}}
+\index{found@{found}!Filter\+Details@{Filter\+Details}}
+\subsubsection[{\texorpdfstring{found}{found}}]{\setlength{\rightskip}{0pt plus 5cm}bool Filter\+Details\+::found}\hypertarget{structFilterDetails_ae022d744143354507ecb4a46c4c4dcf4}{}\label{structFilterDetails_ae022d744143354507ecb4a46c4c4dcf4}
+True if the specification was found, false if not \index{Filter\+Details@{Filter\+Details}!surface@{surface}}
+\index{surface@{surface}!Filter\+Details@{Filter\+Details}}
+\subsubsection[{\texorpdfstring{surface}{surface}}]{\setlength{\rightskip}{0pt plus 5cm}int Filter\+Details\+::surface}\hypertarget{structFilterDetails_ae5c1354aeca0877f498f6e05853aedf4}{}\label{structFilterDetails_ae5c1354aeca0877f498f6e05853aedf4}
+The surface of the object (only set if the object was found) \index{Filter\+Details@{Filter\+Details}!x\+Pos\+Center@{x\+Pos\+Center}}
+\index{x\+Pos\+Center@{x\+Pos\+Center}!Filter\+Details@{Filter\+Details}}
+\subsubsection[{\texorpdfstring{x\+Pos\+Center}{xPosCenter}}]{\setlength{\rightskip}{0pt plus 5cm}int Filter\+Details\+::x\+Pos\+Center}\hypertarget{structFilterDetails_a93a398ce2876fd270232559ab29b79ce}{}\label{structFilterDetails_a93a398ce2876fd270232559ab29b79ce}
+The x position of the center of the object (only set if the object was found) \index{Filter\+Details@{Filter\+Details}!y\+Pos\+Center@{y\+Pos\+Center}}
+\index{y\+Pos\+Center@{y\+Pos\+Center}!Filter\+Details@{Filter\+Details}}
+\subsubsection[{\texorpdfstring{y\+Pos\+Center}{yPosCenter}}]{\setlength{\rightskip}{0pt plus 5cm}int Filter\+Details\+::y\+Pos\+Center}\hypertarget{structFilterDetails_a68c1cab0adbbfb1ffff14518fdc2295e}{}\label{structFilterDetails_a68c1cab0adbbfb1ffff14518fdc2295e}
+The y position of the center of the object (only set if the object was found) 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Detection.\+hpp\item 
+src/Detection.\+cpp\end{DoxyCompactItemize}

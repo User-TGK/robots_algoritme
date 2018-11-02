@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classApplication.html" title="the super class for an application instance. The application can be either the interactive mode..." alt="" coords="5,56,92,83"/>
+<area shape="rect" id="node2" href="$classBatchApplication.html" title="Instance of an application. The batch application starts the batch mode in the run() function that st..." alt="" coords="153,5,273,32"/>
+<area shape="rect" id="node3" href="$classCalibrationMode.html" title="the calibrationmode is used to calibrate the color ranges. The mode will open up a window with slider..." alt="" coords="155,56,271,83"/>
+<area shape="rect" id="node4" href="$classInteractiveApplication.html" title="Instance of an application. The interactive application starts the interactive mode in the run() func..." alt="" coords="140,107,287,133"/>
+</map>

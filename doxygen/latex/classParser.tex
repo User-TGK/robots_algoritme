@@ -1,0 +1,188 @@
+\hypertarget{classParser}{}\section{Parser Class Reference}
+\label{classParser}\index{Parser@{Parser}}
+
+
+the parser contains all functionality to parse batch files and specifications.  
+
+
+
+
+{\ttfamily \#include $<$Parser.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classParser_a12234f6cd36b61af4b50c94a179422c1}{Parser} ()\hypertarget{classParser_a12234f6cd36b61af4b50c94a179422c1}{}\label{classParser_a12234f6cd36b61af4b50c94a179422c1}
+
+\begin{DoxyCompactList}\small\item\em default constructor of the specification parser \end{DoxyCompactList}\item 
+virtual \hyperlink{classParser_a3e658b5917a93a3ef648050d060e3a93}{$\sim$\+Parser} ()\hypertarget{classParser_a3e658b5917a93a3ef648050d060e3a93}{}\label{classParser_a3e658b5917a93a3ef648050d060e3a93}
+
+\begin{DoxyCompactList}\small\item\em destructor of the specification parser \end{DoxyCompactList}\item 
+bool \hyperlink{classParser_a8af5f2b3cbe50b7b4ad41e0a54dd70f5}{try\+Parse\+Specification\+From\+Str} (const std\+::string \&str, \hyperlink{structSpecification}{Specification} \&specification)
+\begin{DoxyCompactList}\small\item\em function that tries to create a specification object of a string \end{DoxyCompactList}\item 
+bool \hyperlink{classParser_a5c5356810a3861d9fe50353fbd00040e}{try\+Parse\+Batch\+Config} (const std\+::string \&batch\+Config\+Path, std\+::vector$<$ \hyperlink{structSpecification}{Specification} $>$ \&specifications)
+\begin{DoxyCompactList}\small\item\em function that tries to convert a batchfile into a list of specifications \end{DoxyCompactList}\item 
+supported\+Color \hyperlink{classParser_abfb3329a63d465462db4778609abd18a}{color\+From\+Str} (const std\+::string \&str) const 
+\begin{DoxyCompactList}\small\item\em function that converts a string into a supported color (read \hyperlink{SpecificationConfig_8hpp_source}{src/\+Specification\+Config.\+hpp} for the supported colors) \end{DoxyCompactList}\item 
+supported\+Shape \hyperlink{classParser_a2530730579b210a6d64154404b670eea}{shape\+From\+Str} (const std\+::string \&str) const 
+\begin{DoxyCompactList}\small\item\em function that converts a string into a supported shape (read \hyperlink{SpecificationConfig_8hpp_source}{src/\+Specification\+Config.\+hpp} for the supported shapes) \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{classParser_a8453d650d2ac054b3ca603eca69802db}{str\+From\+Color} (const supported\+Color \&color)
+\begin{DoxyCompactList}\small\item\em function that converts a color into its string representation \end{DoxyCompactList}\item 
+const std\+::string \hyperlink{classParser_a5938f4f0fb88e6a5a4fdc1e795920bb3}{str\+From\+Shape} (const supported\+Shape \&shape)
+\begin{DoxyCompactList}\small\item\em function that converts a shape into its string representation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+the parser contains all functionality to parse batch files and specifications. 
+
+\subsection{Member Function Documentation}
+\index{Parser@{Parser}!color\+From\+Str@{color\+From\+Str}}
+\index{color\+From\+Str@{color\+From\+Str}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{color\+From\+Str(const std\+::string \&str) const }{colorFromStr(const std::string &str) const }}]{\setlength{\rightskip}{0pt plus 5cm}supported\+Color Parser\+::color\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+) const}\hypertarget{classParser_abfb3329a63d465462db4778609abd18a}{}\label{classParser_abfb3329a63d465462db4778609abd18a}
+
+
+function that converts a string into a supported color (read \hyperlink{SpecificationConfig_8hpp_source}{src/\+Specification\+Config.\+hpp} for the supported colors) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const supported\+Color the supported color instance 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & an invalid string was given \\
+\hline
+\end{DoxyExceptions}
+\index{Parser@{Parser}!shape\+From\+Str@{shape\+From\+Str}}
+\index{shape\+From\+Str@{shape\+From\+Str}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{shape\+From\+Str(const std\+::string \&str) const }{shapeFromStr(const std::string &str) const }}]{\setlength{\rightskip}{0pt plus 5cm}supported\+Shape Parser\+::shape\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str}
+\end{DoxyParamCaption}
+) const}\hypertarget{classParser_a2530730579b210a6d64154404b670eea}{}\label{classParser_a2530730579b210a6d64154404b670eea}
+
+
+function that converts a string into a supported shape (read \hyperlink{SpecificationConfig_8hpp_source}{src/\+Specification\+Config.\+hpp} for the supported shapes) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const supported\+Shape the supported shape instance 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & an invalid string was given \\
+\hline
+\end{DoxyExceptions}
+\index{Parser@{Parser}!str\+From\+Color@{str\+From\+Color}}
+\index{str\+From\+Color@{str\+From\+Color}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{str\+From\+Color(const supported\+Color \&color)}{strFromColor(const supportedColor &color)}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Parser\+::str\+From\+Color (
+\begin{DoxyParamCaption}
+\item[{const supported\+Color \&}]{color}
+\end{DoxyParamCaption}
+)}\hypertarget{classParser_a8453d650d2ac054b3ca603eca69802db}{}\label{classParser_a8453d650d2ac054b3ca603eca69802db}
+
+
+function that converts a color into its string representation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & the color instance to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\+::string the string representation of the color 
+\end{DoxyReturn}
+\index{Parser@{Parser}!str\+From\+Shape@{str\+From\+Shape}}
+\index{str\+From\+Shape@{str\+From\+Shape}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{str\+From\+Shape(const supported\+Shape \&shape)}{strFromShape(const supportedShape &shape)}}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Parser\+::str\+From\+Shape (
+\begin{DoxyParamCaption}
+\item[{const supported\+Shape \&}]{shape}
+\end{DoxyParamCaption}
+)}\hypertarget{classParser_a5938f4f0fb88e6a5a4fdc1e795920bb3}{}\label{classParser_a5938f4f0fb88e6a5a4fdc1e795920bb3}
+
+
+function that converts a shape into its string representation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shape} & the shape instance to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const std\+::string the string representation of the shape 
+\end{DoxyReturn}
+\index{Parser@{Parser}!try\+Parse\+Batch\+Config@{try\+Parse\+Batch\+Config}}
+\index{try\+Parse\+Batch\+Config@{try\+Parse\+Batch\+Config}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{try\+Parse\+Batch\+Config(const std\+::string \&batch\+Config\+Path, std\+::vector$<$ Specification $>$ \&specifications)}{tryParseBatchConfig(const std::string &batchConfigPath, std::vector< Specification > &specifications)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Parser\+::try\+Parse\+Batch\+Config (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{batch\+Config\+Path, }
+\item[{std\+::vector$<$ {\bf Specification} $>$ \&}]{specifications}
+\end{DoxyParamCaption}
+)}\hypertarget{classParser_a5c5356810a3861d9fe50353fbd00040e}{}\label{classParser_a5c5356810a3861d9fe50353fbd00040e}
+
+
+function that tries to convert a batchfile into a list of specifications 
+
+
+\begin{DoxyParams}{Parameters}
+{\em batch\+Config\+Path} & the path to the batchfile that contains the specifications \\
+\hline
+{\em specifications} & the list where the converted specifications will be stored in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the convertion was successfull 
+
+false if the batch file couldnt be converted 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & the batchfile contains syntax errors \\
+\hline
+\end{DoxyExceptions}
+\index{Parser@{Parser}!try\+Parse\+Specification\+From\+Str@{try\+Parse\+Specification\+From\+Str}}
+\index{try\+Parse\+Specification\+From\+Str@{try\+Parse\+Specification\+From\+Str}!Parser@{Parser}}
+\subsubsection[{\texorpdfstring{try\+Parse\+Specification\+From\+Str(const std\+::string \&str, Specification \&specification)}{tryParseSpecificationFromStr(const std::string &str, Specification &specification)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Parser\+::try\+Parse\+Specification\+From\+Str (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{str, }
+\item[{{\bf Specification} \&}]{specification}
+\end{DoxyParamCaption}
+)}\hypertarget{classParser_a8af5f2b3cbe50b7b4ad41e0a54dd70f5}{}\label{classParser_a8af5f2b3cbe50b7b4ad41e0a54dd70f5}
+
+
+function that tries to create a specification object of a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & the string to be converted to a specification \\
+\hline
+{\em specification} & reference to the specification where the string data will be stored in \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the string was successfully converted 
+
+false if the string wasnt successfully converted 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em if} & the string could not be converted \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Parser.\+hpp\item 
+src/Parser.\+cpp\end{DoxyCompactItemize}
